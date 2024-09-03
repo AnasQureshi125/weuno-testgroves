@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import { ImArrowRight2 } from "react-icons/im";
 
 const SectionFindPlace = () => {
   return (
@@ -25,8 +25,9 @@ const SectionFindPlace = () => {
             Our interactive map will show you the way to the shops and
             restaurants that you want to see
           </p>
-          <button className="rounded-2xl bg-gradient-to-t from-[#cfb37b] to-[#B28C4E] pl-4 pr-9 py-3.5 text-md text-gray-100 hover:from-[#c8a55f] hover:to-[#a37935] text-left">
-            Open the map
+          <button className="rounded-2xl bg-gradient-to-t from-[#cfb37b] to-[#B28C4E] pl-4 pr-9 py-3.5 text-md text-gray-100 hover:from-[#c8a55f] hover:to-[#a37935] text-left flex items-center justify-center">
+            Open the map &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <ImArrowRight2 />
           </button>
         </div>
         <div className="lg:w-2/4 w-full md:hidden block">

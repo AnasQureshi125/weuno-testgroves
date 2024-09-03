@@ -3,6 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import Image from "next/image";
+import { ImArrowRight2 } from "react-icons/im";
 
 const SectionBookTickets = () => {
   const settings = {
@@ -51,8 +52,8 @@ const SectionBookTickets = () => {
           <h1 className="text-5xl font-medium font-serif pb-3">
             Curate your experience as you like
           </h1>
-          <button className="mt-6 md:mt-0 rounded-2xl bg-gradient-to-t from-[#cfb37b] to-[#B28C4E] px-12 py-3.5 text-md text-gray-100 hover:from-[#c8a55f] hover:to-[#a37935]">
-            Book Tickets
+          <button className="mt-6 md:mt-0 rounded-2xl bg-gradient-to-t from-[#cfb37b] to-[#B28C4E] px-12 py-3.5 text-md text-gray-100 hover:from-[#c8a55f] hover:to-[#a37935] flex items-center justify-center">
+            Book Tickets &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ImArrowRight2 />
           </button>
         </div>
         <div className="lg:w-3/4 w-full overflow-hidden">

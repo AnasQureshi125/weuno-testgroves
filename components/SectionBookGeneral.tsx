@@ -3,6 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import Image from "next/image";
+import { ImArrowRight2 } from "react-icons/im";
 
 const SectionBookGeneral = () => {
   const settings = {
@@ -50,8 +51,9 @@ const SectionBookGeneral = () => {
         <h1 className="text-5xl font-medium font-serif pb-3 lg:max-w-2xl">
           Book General Access ticket and enjoy the attractions for free
         </h1>
-        <button className="rounded-2xl bg-gradient-to-t from-[#cfb37b] to-[#B28C4E] px-12 py-3.5 text-md text-gray-100 hover:from-[#c8a55f] hover:to-[#a37935]">
-          Book General Access Ticket --
+        <button className="rounded-2xl bg-gradient-to-t from-[#cfb37b] to-[#B28C4E] px-12 py-3.5 text-md text-gray-100 hover:from-[#c8a55f] hover:to-[#a37935] flex items-center justify-center">
+          Book General Access Ticket &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <ImArrowRight2 />
         </button>
       </div>
 

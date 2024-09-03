@@ -1,4 +1,5 @@
 import React from "react";
+import { ImArrowRight2 } from "react-icons/im";
 
 const SectionVideo = () => {
   return (
@@ -15,11 +16,10 @@ const SectionVideo = () => {
         </p>
       </div>
       <div className="max-w-3xl lg:max-w-5xl mx-auto">
-        {/* <video controls poster="/slider1.jpeg">
+        <video controls poster="/slider1.jpeg">
           <source src="/main-video-eng3.mp4" type="video/mp4" />
           Your browser does not support the video tag.
-        </video> */}
-        Video Here
+        </video>
       </div>
       <div className="mx-auto py-12 flex flex-wrap items-center md:justify-between justify-end rounded-3xl bg-[#293914] my-12 lg:max-w-6xl px-7">
         <div className="text-left flex flex-col items-start justify-center gap-y-3 max-w-[36rem]">
@@ -33,7 +33,10 @@ const SectionVideo = () => {
           </p>
         </div>
         <div className="w-10">
-          <span> ---</span>
+          <span>
+            {" "}
+            <ImArrowRight2 className="text-2xl" />
+          </span>
         </div>
       </div>
     </section>

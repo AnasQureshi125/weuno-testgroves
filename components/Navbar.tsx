@@ -6,6 +6,7 @@ import { RiTwitterXLine } from "react-icons/ri";
 import MobileNavbar from "./MobileNavbar";
 import { useSelector, useDispatch } from "react-redux";
 import { toggleUpdate } from "@/statemanage/controllers/updatestate";
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import Link from "next/link";
 
 const Navbar = () => {
@@ -48,8 +49,8 @@ const Navbar = () => {
                 </button>
 
                 <div className="sm:flex sm:gap-4">
-                  <button className="text-gray-100 px-12 py-3.5">
-                    English
+                  <button className="text-gray-100 px-12 py-3.5 flex items-center justify-center">
+                    <MdOutlineKeyboardArrowDown /> &nbsp; 🇬🇧 English
                   </button>
                 </div>
               </div>

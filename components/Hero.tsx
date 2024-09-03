@@ -2,6 +2,7 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import Image from "next/image";
+import { ImArrowRight2 } from "react-icons/im";
 
 const Hero = () => {
   return (
@@ -36,8 +37,9 @@ const Hero = () => {
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum
               </p>
-              <button className="rounded-2xl bg-gradient-to-t from-[#cfb37b] to-[#B28C4E] px-12 py-3.5 text-md text-gray-100 hover:from-[#c8a55f] hover:to-[#a37935]">
-                Book reservation now --
+              <button className="rounded-2xl bg-gradient-to-t from-[#cfb37b] to-[#B28C4E] px-12 py-3.5 text-md text-gray-100 hover:from-[#c8a55f] hover:to-[#a37935] flex items-center justify-center">
+                Book reservation now &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <ImArrowRight2 />
               </button>
             </div>
           </div>
