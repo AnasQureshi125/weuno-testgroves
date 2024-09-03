@@ -12,10 +12,10 @@ const Hero = () => {
         swipeable={false}
         showStatus={false}
         showArrows={false}
-        // infiniteLoop={true}
+        infiniteLoop={true}
         showThumbs={false}
-        // stopOnHover={true}
-        // autoPlay={true}
+        stopOnHover={true}
+        autoPlay={true}
       >
         <div className="h-screen lg:h-auto">
           <Image
@@ -25,8 +25,8 @@ const Hero = () => {
             height={45}
             className="w-full overflow-hidden h-full object-cover"
           />
-          <div className="absolute left-0 top-0 w-full xl:w-2/4 lg:w-2/3 h-full bg-[#0000007a] lg:px-32 px-6 flex flex-col md:justify-center">
-            <div className="pt-40 md:pt-0 flex flex-col items-start justify-center xl:gap-y-12  mx-auto lg:mb-10 px-1 gap-y-9">
+          <div className="absolute left-0 top-0 w-full xl:w-2/4 lg:w-2/3 h-full bg-[#0000007a] lg:px-32 px-6 flex flex-col xl:justify-start md:justify-center">
+            <div className="pt-40 xl:pt-60 md:pt-0 flex flex-col items-start justify-center xl:gap-y-12 md:mx-auto lg:mb-10 px-1 gap-y-9">
               <p className="uppercase text-xs tracking-[.20em] text-white">
                 Khawaja Yanni
               </p>
