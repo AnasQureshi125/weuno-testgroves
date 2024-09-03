@@ -3,31 +3,49 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 35, 48, 5;
+  --background-start-rgb: 35, 48, 5;
+  --background-end-rgb: 22, 30, 2;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-rgb: 35, 48, 5;
+    --background-start-rgb: 35, 48, 5;
+    --background-end-rgb: 22, 30, 2;
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
   background: linear-gradient(
-      to bottom,
-      transparent,
+      to right,
+      rgb(var(--foreground-rgb)),
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  color: rgb(229, 231, 235);
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.carousel {
+  height: 45rem !important;
+}
+.carousel .control-dots {
+  width: 48% !important;
+  text-align: right !important;
+}
+.carousel .control-dots .dot {
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 50%;
+  margin: 0 3px !important;
+}
+.slick-arrow,
+.slick-prev {
+  display: none !important;
 }
