@@ -1,10 +1,12 @@
 "use client";
 import { useState } from "react";
 import { FaTimes } from "react-icons/fa";
-import Link from "next/link"; // Import Next.js Link
+import Link from "next/link";
 import { useSelector, useDispatch } from "react-redux";
 import { toggleUpdate } from "@/statemanage/controllers/updatestate";
 import Image from "next/image";
+import { navData } from "@/lib/data";
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
 const MobileNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,40 +39,23 @@ const MobileNavbar = () => {
 
         {/* Navigation links */}
         <nav className="flex flex-col mt-10">
-          <Link href="/" passHref className="border-t p-6">
-            <span className="text-md space-x-4 tracking-widest cursor-pointer hover:text-gray-300 transition">
-              DINE WITH US
-            </span>
-          </Link>
-          <Link href="/visitplan" passHref className="border-t p-6">
-            <span className="text-md space-x-4 tracking-widest cursor-pointer hover:text-gray-300 transition">
-              PLAN YOUR VISIT
-            </span>
-          </Link>
-          <Link href="/events" passHref className="border-t p-6">
-            <span className="text-md space-x-4 tracking-widest cursor-pointer hover:text-gray-300 transition">
-              EVENTS
-            </span>
-          </Link>
-          <Link href="/viewgrovesmap" passHref className="border-t p-6">
-            <span className="text-md space-x-4 tracking-widest cursor-pointer hover:text-gray-300 transition">
-              VIEW GROVES MAP
-            </span>
-          </Link>
-          <Link href="/ourstory" passHref className="border-t p-6">
-            <span className="text-md space-x-4 tracking-widest cursor-pointer hover:text-gray-300 transition">
-              OUR STORY
-            </span>
-          </Link>
-          <Link href="/contact" passHref className="border-t p-6">
-            <span className="text-md space-x-4 tracking-widest cursor-pointer hover:text-gray-300 transition">
-              CONTACT US
-            </span>
-          </Link>
+          {navData.map((navigation) => {
+            return (
+              <Link
+                key={navigation.id}
+                href={navigation.navigationUrl}
+                className="border-t p-6"
+              >
+                <span className="text-md space-x-4 tracking-widest cursor-pointer hover:text-gray-300 transition">
+                  {navigation.navigationName}
+                </span>
+              </Link>
+            );
+          })}
           <Link href="/login" passHref className="border-t p-6">
             <div className="sm:flex sm:gap-4 mb-6 md:mb-0">
-              <button className="text-gray-100 px-12 py-3.5 border">
-                English
+              <button className="text-gray-100 px-4 py-3.5 flex items-center justify-start border">
+                <MdOutlineKeyboardArrowDown /> &nbsp; 🇬🇧 English
               </button>
             </div>
             <div>

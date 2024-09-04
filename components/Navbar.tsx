@@ -8,6 +8,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { toggleUpdate } from "@/statemanage/controllers/updatestate";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import Link from "next/link";
+import { navData } from "@/lib/data";
 
 const Navbar = () => {
   const toggleState = useSelector((state: any) => state.toggle);
@@ -68,37 +69,16 @@ const Navbar = () => {
         </div>
       </div>
       <div className="relative mx-auto hidden md:block md:max-w-screen-2xl border-t border-b">
-        <nav className="flex items-center justify-center gap-9 px-4 sm:px-6 lg:px-8">
-          <Link href="/" className="p-6 hover:text-yellow-500 transition">
-            DINE WITH US
-          </Link>
-          <Link
-            href="/visitplan"
-            className="p-6 hover:text-yellow-500 transition"
-          >
-            PLAN YOUR VISIT
-          </Link>
-          <Link href="/events" className="p-6 hover:text-yellow-500 transition">
-            EVENTS
-          </Link>
-          <Link
-            href="/viewgrovesmap"
-            className="p-6 hover:text-yellow-500 transition"
-          >
-            VIEW GROVES MAP
-          </Link>
-          <Link
-            href="/ourstory"
-            className="p-6 hover:text-yellow-500 transition"
-          >
-            OUR STORY
-          </Link>
-          <Link
-            href="/contact"
-            className="p-6 hover:text-yellow-500 transition"
-          >
-            CONTACT US
-          </Link>
+        <nav className="lg:flex items-center justify-center xl:gap-9 lg:gap-6 px-4 sm:px-6 xl:px-8 lg:px-6 hidden">
+          {navData.map((navigation) => (
+            <Link
+              key={navigation.id}
+              href={navigation.navigationUrl}
+              className="xl:p-6 lg:p-3 hover:text-yellow-500 transition lg:text-sm"
+            >
+              {navigation.navigationName}
+            </Link>
+          ))}
         </nav>
       </div>
       <MobileNavbar />
